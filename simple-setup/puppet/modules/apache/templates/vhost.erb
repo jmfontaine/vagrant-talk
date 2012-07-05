@@ -1,0 +1,17 @@
+NameVirtualHost *:<%= scope.lookupvar('params::port') %>
+
+<VirtualHost *:<%= scope.lookupvar('params::port') %>>
+    ServerName <%= scope.lookupvar('params::servername') %>
+
+    ## Apache
+    AddDefaultCharset UTF-8
+
+    DocumentRoot "/vagrant_app/"
+    <Directory   "/vagrant_app/">
+        ## Apache
+        Options -Indexes
+        AllowOverride None
+        Order allow,deny
+        Allow from all
+    </Directory>
+</VirtualHost>
