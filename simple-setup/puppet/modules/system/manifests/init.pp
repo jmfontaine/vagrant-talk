@@ -1,4 +1,16 @@
 class system {
+    # Create "puppet" group
+    group { "puppet":
+        ensure => "present",
+    }
+
+    # Define default files permissions
+    File {
+        owner => 0,
+        group => 0,
+        mode  => 0644
+    }
+
     # Update packages list before doing anything
     exec { 'apt.update' :
         command => 'apt-get update',
