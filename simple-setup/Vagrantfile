@@ -14,7 +14,7 @@ Vagrant::Config.run do |config|
   # config.vm.boot_mode = :gui
 
   # VM hostname
-  config.vm.host_name = "application"
+  config.vm.host_name = "vagrant-simple-setup"
 
   # Assign this VM to a host-only network IP, allowing you to access it
   # via the IP. Host-only networks can talk to the host machine as well as
